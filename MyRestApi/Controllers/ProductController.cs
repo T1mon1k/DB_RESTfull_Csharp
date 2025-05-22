@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MyRestApi.Data;
+using MyRestApi.DTOs;
 using MyRestApi.Models;
+using MyRestApi.Services;
 
 namespace MyRestApi.Controllers
 {
@@ -9,38 +9,62 @@ namespace MyRestApi.Controllers
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ProductService _service;
 
-        public ProductController(AppDbContext context)
+        public ProductController(ProductService service)
         {
-            _context = context;
+            _service = service;
         }
 
-        // GET: api/product
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var products = await _context.Products.ToListAsync();
+            var products = await _service.GetAllAsync();
             return Ok(products);
         }
 
-        // GET: api/product/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _service.GetByIdAsync(id);
             if (product == null)
                 return NotFound();
             return Ok(product);
         }
 
-        // POST: api/product
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Product product)
+        public async Task<IActionResult> Create([FromBody] ProductDto dto)
         {
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
+            var product = new Product
+            {
+                Name = dto.Name,
+                Description = dto.Description,
+                Price = dto.Price,
+                Stock = dto.Stock,
+                Category = dto.Category
+            };
+
+            var created = await _service.CreateAsync(product);
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+        }
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] ProductDto productDto)
+        {
+            var result = await _service.UpdateAsync(id, productDto);
+            if (!result)
+                return NotFound();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _service.DeleteAsync(id);
+            if (!result)
+                return NotFound();
+            return NoContent();
         }
     }
 }
