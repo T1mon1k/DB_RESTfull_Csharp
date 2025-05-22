@@ -48,7 +48,6 @@ namespace MyRestApi.Controllers
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
-
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] ProductDto productDto)
         {
@@ -65,6 +64,42 @@ namespace MyRestApi.Controllers
             if (!result)
                 return NotFound();
             return NoContent();
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> Search([FromQuery] string keyword)
+        {
+            var results = await _service.SearchByNameAsync(keyword);
+            return Ok(results);
+        }
+
+        [HttpGet("category/{category}")]
+        public async Task<IActionResult> GetByCategory(string category)
+        {
+            var products = await _service.GetByCategoryAsync(category);
+            return Ok(products);
+        }
+
+        [HttpGet("sorted")]
+        public async Task<IActionResult> GetSorted([FromQuery] string order = "asc")
+        {
+            var sorted = await _service.GetSortedByPriceAsync(order.ToLower() == "desc");
+            return Ok(sorted);
+        }
+
+        [HttpPatch("{id}/stock")]
+        public async Task<IActionResult> UpdateStock(int id, [FromBody] int newStock)
+        {
+            var result = await _service.UpdateStockAsync(id, newStock);
+            if (!result) return NotFound();
+            return NoContent();
+        }
+
+        [HttpGet("count")]
+        public async Task<IActionResult> GetProductCount()
+        {
+            var count = await _service.CountAsync();
+            return Ok(new { count });
         }
     }
 }

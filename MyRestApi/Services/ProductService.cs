@@ -55,5 +55,41 @@ namespace MyRestApi.Services
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<List<Product>> SearchByNameAsync(string keyword)
+        {
+            return await _context.Products
+                .Where(p => p.Name.Contains(keyword))
+                .ToListAsync();
+        }
+
+        public async Task<List<Product>> GetByCategoryAsync(string category)
+        {
+            return await _context.Products
+                .Where(p => p.Category == category)
+                .ToListAsync();
+        }
+
+        public async Task<List<Product>> GetSortedByPriceAsync(bool descending)
+        {
+            return descending
+                ? await _context.Products.OrderByDescending(p => p.Price).ToListAsync()
+                : await _context.Products.OrderBy(p => p.Price).ToListAsync();
+        }
+
+        public async Task<bool> UpdateStockAsync(int id, int newStock)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product == null) return false;
+
+            product.Stock = newStock;
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<int> CountAsync()
+        {
+            return await _context.Products.CountAsync();
+        }
     }
 }
