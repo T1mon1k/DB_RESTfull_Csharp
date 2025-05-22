@@ -101,5 +101,6 @@ namespace MyRestApi.Controllers
             var count = await _service.CountAsync();
             return Ok(new { count });
         }
+        
     }
 }
