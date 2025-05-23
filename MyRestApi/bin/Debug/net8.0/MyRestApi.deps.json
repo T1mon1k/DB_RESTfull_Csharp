@@ -10,10 +10,10 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc": "2.3.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.5",
-          "Microsoft.EntityFrameworkCore": "8.0.5",
+          "Microsoft.EntityFrameworkCore": "8.0.13",
           "Microsoft.EntityFrameworkCore.Design": "8.0.5",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.5",
-          "Pomelo.EntityFrameworkCore.MySql": "8.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.13",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.3",
           "Swashbuckle.AspNetCore": "8.1.1"
         },
         "runtime": {
@@ -576,34 +576,34 @@
         }
       },
       "Microsoft.CSharp/4.5.0": {},
-      "Microsoft.EntityFrameworkCore/8.0.5": {
+      "Microsoft.EntityFrameworkCore/8.0.13": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.5",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.5",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.13",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.13",
           "Microsoft.Extensions.Caching.Memory": "8.0.1",
-          "Microsoft.Extensions.Logging": "8.0.0"
+          "Microsoft.Extensions.Logging": "8.0.1"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.dll": {
-            "assemblyVersion": "8.0.5.0",
-            "fileVersion": "8.0.524.21704"
+            "assemblyVersion": "8.0.13.0",
+            "fileVersion": "8.0.1325.6604"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/8.0.5": {
+      "Microsoft.EntityFrameworkCore.Abstractions/8.0.13": {
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "assemblyVersion": "8.0.5.0",
-            "fileVersion": "8.0.524.21704"
+            "assemblyVersion": "8.0.13.0",
+            "fileVersion": "8.0.1325.6604"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.5": {},
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.13": {},
       "Microsoft.EntityFrameworkCore.Design/8.0.5": {
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.5.0",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.5",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.13",
           "Microsoft.Extensions.DependencyModel": "8.0.0",
           "Mono.TextTemplating": "2.2.1"
         },
@@ -614,15 +614,15 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/8.0.5": {
+      "Microsoft.EntityFrameworkCore.Relational/8.0.13": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.5",
+          "Microsoft.EntityFrameworkCore": "8.0.13",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "8.0.5.0",
-            "fileVersion": "8.0.524.21704"
+            "assemblyVersion": "8.0.13.0",
+            "fileVersion": "8.0.1325.6604"
           }
         }
       },
@@ -744,11 +744,17 @@
           }
         }
       },
-      "Microsoft.Extensions.Logging/8.0.0": {
+      "Microsoft.Extensions.Logging/8.0.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.1",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
           "Microsoft.Extensions.Options": "8.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Logging.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/8.0.2": {
@@ -857,15 +863,15 @@
           }
         }
       },
-      "Pomelo.EntityFrameworkCore.MySql/8.0.0": {
+      "Pomelo.EntityFrameworkCore.MySql/8.0.3": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.5",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.13",
           "MySqlConnector": "2.3.5"
         },
         "runtime": {
           "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
+            "assemblyVersion": "8.0.3.0",
+            "fileVersion": "8.0.3.0"
           }
         }
       },
@@ -1395,26 +1401,26 @@
       "path": "microsoft.csharp/4.5.0",
       "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore/8.0.5": {
+    "Microsoft.EntityFrameworkCore/8.0.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sqpDZgfzmTPXy/jCekqTaPDwqRDjtdGmIL+eqFfXtVAoH4AanWjeyxQ1ej3uVnTQO6f23+m9+ggJDVcgyPJxcA==",
-      "path": "microsoft.entityframeworkcore/8.0.5",
-      "hashPath": "microsoft.entityframeworkcore.8.0.5.nupkg.sha512"
+      "sha512": "sha512-4wyLeg64sZgJcER83fkitlKuySY3OzwcOZSZcGV1TNskmThupfhcVlsQht7bNCfNpXTCZVNIOwAZChk6/OFdXQ==",
+      "path": "microsoft.entityframeworkcore/8.0.13",
+      "hashPath": "microsoft.entityframeworkcore.8.0.13.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/8.0.5": {
+    "Microsoft.EntityFrameworkCore.Abstractions/8.0.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qwYdfjFKtmTXX8NIm0MuZxUkon1tcw+aF5huzR7YOVr/tR3s4fqw9DWcvc23l3Jhpo/uGHWZcNPyFlI2CD3Usg==",
-      "path": "microsoft.entityframeworkcore.abstractions/8.0.5",
-      "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.5.nupkg.sha512"
+      "sha512": "sha512-a6O+v8CMStumpVoQyN0aUpx5P3/qYZP+5791sGrzJhIM+QsniQdSaJVdUSneL40M+FpBgtiC8ggqzNo2x/gVlw==",
+      "path": "microsoft.entityframeworkcore.abstractions/8.0.13",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.13.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.5": {
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LzoKedC+9A8inF5d3iIzgyv/JDXgKrtpYoGIC3EqGWuHVDm9s/IHHApeTOTbzvnr7yBVV+nmYfyT1nwtzRDp0Q==",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.5",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.5.nupkg.sha512"
+      "sha512": "sha512-ENny33QADFiRxge5ikJBs2p7JB4MQx/ZSPKPNwt2eJPO0lVUGSjTiJeunGGggkVHiaUy0yY4f625LQtNlErIsw==",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.13",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.13.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Design/8.0.5": {
       "type": "package",
@@ -1423,12 +1429,12 @@
       "path": "microsoft.entityframeworkcore.design/8.0.5",
       "hashPath": "microsoft.entityframeworkcore.design.8.0.5.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/8.0.5": {
+    "Microsoft.EntityFrameworkCore.Relational/8.0.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-x2bdSK3eKKEQkDdYcGxxDU+S7NqhBiz/Fciz01Mafz9P71VRdP3JskKHaZvwK0/sNEAT3hS7BTsDQGUA2F9mAA==",
-      "path": "microsoft.entityframeworkcore.relational/8.0.5",
-      "hashPath": "microsoft.entityframeworkcore.relational.8.0.5.nupkg.sha512"
+      "sha512": "sha512-uQR2iTar+6ZEjEHTwgH0/7ySSRme4R9sDiupfG3w/eBub3365fPw/MjhsuOMQkdq9YzLM7veH4Qt/K9OqL26Qg==",
+      "path": "microsoft.entityframeworkcore.relational/8.0.13",
+      "hashPath": "microsoft.entityframeworkcore.relational.8.0.13.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
@@ -1528,12 +1534,12 @@
       "path": "microsoft.extensions.localization.abstractions/8.0.11",
       "hashPath": "microsoft.extensions.localization.abstractions.8.0.11.nupkg.sha512"
     },
-    "Microsoft.Extensions.Logging/8.0.0": {
+    "Microsoft.Extensions.Logging/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tvRkov9tAJ3xP51LCv3FJ2zINmv1P8Hi8lhhtcKGqM+ImiTCC84uOPEI4z8Cdq2C3o9e+Aa0Gw0rmrsJD77W+w==",
-      "path": "microsoft.extensions.logging/8.0.0",
-      "hashPath": "microsoft.extensions.logging.8.0.0.nupkg.sha512"
+      "sha512": "sha512-4x+pzsQEbqxhNf1QYRr5TDkLP9UsLT3A6MdRKDDEgrW7h1ljiEPgTNhKYUhNCCAaVpQECVQ+onA91PTPnIp6Lw==",
+      "path": "microsoft.extensions.logging/8.0.1",
+      "hashPath": "microsoft.extensions.logging.8.0.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging.Abstractions/8.0.2": {
       "type": "package",
@@ -1626,12 +1632,12 @@
       "path": "newtonsoft.json.bson/1.0.2",
       "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
     },
-    "Pomelo.EntityFrameworkCore.MySql/8.0.0": {
+    "Pomelo.EntityFrameworkCore.MySql/8.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wEzKTeYCs/+cGSpT5zE8UrKkJyqpJ24yBufthDoCWUhpCCYUIsMKeX4fvaYcm9mbkfHP2dZ+p6V+ZKTAZ3hXRQ==",
-      "path": "pomelo.entityframeworkcore.mysql/8.0.0",
-      "hashPath": "pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512"
+      "sha512": "sha512-gOHP6v/nFp5V/FgHqv9mZocGqCLGofihEX9dTbLhiXX3H7SJHmGX70GIPUpiqLT+1jIfDxg1PZh9MTUKuk7Kig==",
+      "path": "pomelo.entityframeworkcore.mysql/8.0.3",
+      "hashPath": "pomelo.entityframeworkcore.mysql.8.0.3.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/8.1.1": {
       "type": "package",
